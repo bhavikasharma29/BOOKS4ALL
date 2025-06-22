@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header Styling */
+.header {
+    background-color: #d44c4c;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #d44c4c;
+    color: white;
+    padding: 15px;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Adjust Body Padding */
+.content {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+/* Ebook List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Ebook Title */
+h3 {
+    color: #d44c4c;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Ebook Description */
+p {
+    color: #333;
+    font-size: 16px;
+}
+
+/* Ebook Link */
+a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #d44c4c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+a:hover {
+    background-color: #b93c3c;
+}

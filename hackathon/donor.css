@@ -1,0 +1,229 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #ebe9e9;
+    color: #333;
+    min-height: 100vh; /* Ensures content pushes footer down */
+    padding-bottom: 50px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d44c4c;
+    padding: 10px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+.logo img {
+    /* height: 40px;
+    width: auto; */
+    height: 80px; /* Increased from 40px to 50px */
+    width: auto;
+    max-height: 100%;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Profile */
+.profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    top: 50px;
+    min-width: 120px;
+}
+
+.profile-menu.show {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 600px;
+    background: url('pexels.jpg') no-repeat center top/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* Removed the overlay that was causing the white film effect */
+.hero-overlay {
+    display: none !important;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-container {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #f39c12;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #e67e22;
+    transform: scale(1.05);
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 2px solid #f39c12;
+    color: #f39c12;
+}
+
+.secondary-btn:hover {
+    background: #f39c12;
+    color: white;
+}
+
+/* Donate Section */
+.donor-section {
+    padding: 50px;
+    background: rgba(144, 141, 141, 0.1);
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+
+/* DONATE CONTAINER */
+.donate-container {
+    background: rgba(94, 93, 93, 0.2);
+    padding: 25px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 600px; /* Limits the max width */
+    margin: 20px auto;
+}
+
+/* Form Fields */
+.donation-form input,
+.donation-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #f39c12;
+    border-radius: 5px;
+    background: rgba(236, 160, 160, 0.1);
+    color: rgb(27, 27, 27);
+}
+.or-text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #333;
+}
+
+
+/* Submit Button */
+.donation-form button {
+    padding: 12px 20px;
+    background: #f39c12;
+    color: white;
+    font-size: 18px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.donation-form button:hover {
+    background: #e67e22;
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    background: #d44c4c;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+}
+
+footer p {
+    font-size: 16px;
+}

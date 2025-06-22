@@ -1,0 +1,234 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+
+
+/* Body */
+body {
+   
+
+    background-image: url('donate.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+} 
+.arrow {
+    float: right;
+    font-size: 18px;
+    color: #f39c12;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+  
+   
+    width: 100px; 
+    height: auto; 
+    max-height: 100%; 
+    object-fit: contain;
+}
+
+
+
+
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #dd4c4c;
+    padding: 15px 50px;
+    /* position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 70px; /* Set a fixed height */
+    overflow: hidden;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Profile Icon */
+.profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Main Container */
+.main-container {
+   
+
+    
+        margin: 100px auto 60px;
+        padding: 40px;
+        width: 80%;
+        background: rgba(81, 77, 77, 0.6);
+        border-radius: 12px;
+    
+}
+
+/* Donations Section */
+.donor-section {
+    color: #fff;
+}
+
+h2 {
+  
+
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+/* Search Bar */
+.search-container {
+    margin-bottom: 15px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.search-container select,
+.search-container input {
+    font-size: 16px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.search-container button:hover {
+    background-color: #e67e22;
+}
+
+/* Donations List */
+.donations-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Add Down Arrow to Each Book */
+.donations-list li::after {
+    content: " ▼";  /* Unicode for down arrow */
+    font-size: 18px;
+    color: #f39c12;  /* Orange color */
+    margin-left: auto;
+}
+
+.donations-list li {
+   
+  
+
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.donation-details {
+
+    display: none;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 18px;
+    text-align: left;
+   
+}
+
+/* Close Button */
+.close-btn {
+    background: red;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    border-radius: 5px;
+}
+
+
+
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #dd4c4c;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+}

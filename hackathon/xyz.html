@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Dashboard</title>
+    <link rel="stylesheet" href="xyz.css">
+    <script>
+        function toggleDetails(id) {
+            let details = document.getElementById(id);
+            let allDetails = document.querySelectorAll('.donation-details');
+
+            // Close all details first
+            allDetails.forEach(detail => {
+                if (detail.id !== id) {
+                    detail.style.display = "none";
+                    let icon = detail.previousElementSibling.querySelector(".arrow");
+                    if (icon) icon.style.transform = "rotate(0deg)";
+                }
+            });
+
+            // Toggle the clicked details section
+            if (details.style.display === "block") {
+                details.style.display = "none";
+                details.previousElementSibling.querySelector(".arrow").style.transform = "rotate(0deg)";
+            } else {
+                details.style.display = "block";
+                details.previousElementSibling.querySelector(".arrow").style.transform = "rotate(180deg)";
+            }
+        }
+    </script>
+</head>
+    <body>
+        <div class="container">
+            <ul class="donations-list" id="donations-list">
+                <li onclick="toggleDetails('donation1')">The Great Gatsby</li>
+                <div id="donation1" class="donation-details">
+                    <button class="close-btn" onclick="toggleDetails('donation1')">&times;</button>
+                    <h3>The Great Gatsby</h3>
+                    <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+                    <p><strong>Publication:</strong> Charles Scribner's Sons</p>
+                    <p><strong>Donation Date:</strong> 2025-03-15</p>
+                    <p><strong>Status:</strong> Delivered</p>
+                </div>
+                
+                <li onclick="toggleDetails('donation2')">To Kill a Mockingbird</li>
+                <div id="donation2" class="donation-details">
+                    <button class="close-btn" onclick="toggleDetails('donation2')">&times;</button>
+                    <h3>To Kill a Mockingbird</h3>
+                    <p><strong>Author:</strong> Harper Lee</p>
+                    <p><strong>Publication:</strong> J.B. Lippincott & Co.</p>
+                    <p><strong>Donation Date:</strong> 2025-02-25</p>
+                    <p><strong>Status:</strong> Available</p>
+                </div>
+                
+                <li onclick="toggleDetails('donation3')">1984</li>
+                <div id="donation3" class="donation-details">
+                    <button class="close-btn" onclick="toggleDetails('donation3')">&times;</button>
+                    <h3>1984</h3>
+                    <p><strong>Author:</strong> George Orwell</p>
+                    <p><strong>Publication:</strong> Secker & Warburg</p>
+                    <p><strong>Donation Date:</strong> 2025-01-10</p>
+                    <p><strong>Status:</strong> Matched</p>
+                </div>
+            </ul>
+        </div>
+    </body>
+</html>

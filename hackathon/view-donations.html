@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Donations</title>
+    <link rel="stylesheet" href="view-donations.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="log.png" alt="Logo is here!!!">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Donor.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <img src="profile-icon.png" alt="Profile">
+        </div>
+    </header>
+
+    <div class="main-container">
+        <section id="my-donations" class="donor-section">
+            <h2>Your Donations</h2>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <select id="search-category">
+                    <option value="name">Book Name</option>
+                    <option value="author">Author</option>
+                    <option value="publication">Publication</option>
+                    <option value="status">Status</option>
+                    <option value="location">Location</option>
+                    <option value="grade">Grade</option>
+                    <option value="city">City</option>
+                </select>
+                <input type="text" id="search-input" placeholder="Search here...">
+                <button onclick="searchDonations()">Search</button>
+                <button class="donation-count-btn" onclick="alert('Total Donations: 3')">No. of Donations</button>
+            </div>
+
+            <!-- Donations List -->
+            <ul class="donations-list" id="donations-list">
+                <li onclick="toggleDetails('donation1')">The Great Gatsby</li>
+                <div id="donation1" class="donation-details">
+                    <button class="close-btn" onclick="toggleDetails('donation1')">&times;</button>
+                    <h3>The Great Gatsby</h3>
+                    <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+                    <p><strong>Publication:</strong> Charles Scribner's Sons</p>
+                    <p><strong>Donation Date:</strong> 2025-03-15</p>
+                    <p><strong>Status:</strong> Donated</p>
+                </div>
+
+                <li onclick="toggleDetails('donation2')">To Kill a Mockingbird</li>
+                <div id="donation2" class="donation-details">
+                    <button class="close-btn" onclick="toggleDetails('donation2')">&times;</button>
+                    <h3>To Kill a Mockingbird</h3>
+                    <p><strong>Author:</strong> Harper Lee</p>
+                    <p><strong>Publication:</strong> J.B. Lippincott & Co.</p>
+                    <p><strong>Donation Date:</strong> 2025-02-25</p>
+                    <p><strong>Status:</strong> Available</p>
+                </div>
+
+                <li onclick="toggleDetails('donation3')">1984</li>
+                <div id="donation3" class="donation-details">
+                    <button class="close-btn" onclick="toggleDetails('donation3')">&times;</button>
+                    <h3>1984</h3>
+                    <p><strong>Author:</strong> George Orwell</p>
+                    <p><strong>Publication:</strong> Secker & Warburg</p>
+                    <p><strong>Donation Date:</strong> 2025-01-10</p>
+                    <p><strong>Status:</strong> Matched</p>
+                </div>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Books4All. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function searchDonations() {
+            let category = document.getElementById("search-category").value.toLowerCase();
+            let input = document.getElementById("search-input").value.toLowerCase();
+            let items = document.querySelectorAll(".donations-list li");
+
+            items.forEach(item => {
+                let value = item.textContent.toLowerCase();
+                if (value.includes(input)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+
+        function toggleDetails(id) {
+            let details = document.getElementById(id);
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                document.querySelectorAll('.donation-details').forEach(detail => detail.style.display = "none");
+                details.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

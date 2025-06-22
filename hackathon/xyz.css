@@ -1,0 +1,125 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    background-image: url('donate.png');  /* Ensure this file exists in the same directory */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    overflow: hidden; /* No unnecessary scroll */
+}
+
+/* Main Container */
+.container {
+    width: 80%;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.7); /* Black Blur Effect */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Donation List */
+.donations-list {
+    list-style: none;
+    padding: 20px;
+}
+
+/* Book List Items */
+.donations-list li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.donations-list li:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* Down Arrow Icon */
+.donations-list li::after {
+    content: " ▼";
+    font-size: 18px;
+    color: #f39c12;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Donation Details */
+.donation-details {
+    display: none;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 18px;
+    text-align: left;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Close Button */
+.close-btn {
+    background: red;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+    background: darkred;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .donations-list li {
+        font-size: 16px;
+    }
+
+    .donation-details {
+        font-size: 16px;
+    }
+}
