@@ -40,7 +40,7 @@ _Add UI screenshots here for homepage, request page, delivery dashboard, etc._
 
 ## 🙋‍♀️ Built With Love By:
 > 👩‍💻 Bhavika Sharma – 3rd Year CSE, Banasthali Vidyapith  
-> 📫 Let's connect:   [GitHub](https://github.com/bhavikasharma29)
+> 📫 Let's connect: [Linkedin] (https://www.linkedin.com/in/bhavikasharma-/) [GitHub](https://github.com/bhavikasharma29)
 
 ---
 
